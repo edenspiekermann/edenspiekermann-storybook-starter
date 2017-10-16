@@ -1,8 +1,6 @@
-# ESPI React UI Library
+# ESPI Storybook Starter
 
 This repository can be used alongside React projects to develop and documented all shared UI components in a separate environment.
-
-Furthermore, we will port resuable components from the [espi-ui-library](https://github.com/edenspiekermann/espi-ui-library) to React and add them here to have a well-tested foundation of components for your next React project.
 
 ## How to install
 
