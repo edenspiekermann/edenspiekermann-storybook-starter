@@ -15,7 +15,30 @@ This will install all necessary dependencies.
 
 ## How to develop
 
-* `yarn storybook`: run local server with component library
+Clone this repository and start adding components. On the repository for the web site that will include the components, add this repository as a dependency in your `package.json`. If you don't publish your component library via `npm`, you can [link to the Git Repository directly](https://docs.npmjs.com/files/package.json#git-urls-as-dependencies).
+
+
+### Adding a new Component
+
+All components should be placed in the folder `/components` in their own subfolder.
+
+A component typically consists of:
+
+* A `componentName.jsx` file containing the React component as a default export. Be sure to include [prop types and default props](https://reactjs.org/docs/typechecking-with-proptypes.html) for the component.
+* A `componentName.stories.js` file containing the [stories](https://storybook.js.org/basics/writing-stories/) for this component. A story reflects a variant of the component that is documented on an individual page in Storybook.
+* A `componentName.test.js` file containing all unit tests for the component
+* A `README.md` containing the documentation for this component in Markdown format.
+* A `componentName.scss` file containg all styles for the components
+* A file containing the snapshots generated from the stories of this component. This will be taken care automatically and placed in a separate folder so you don't need to care about ut.
+
+_(Replace componentName with the name of your component written in camel case accordingly)_
+
+__Please ensure to follow these naming conventions as all related build processes are set up to recognize files following the naming scheme.__ If you did successfully, a documentation page for the component will show up when you run Storybook. 
+
+
+### Available Tasks
+
+* `yarn storybook`: run local server with the Storybook component library
 * `yarn build-storybook`: build static production version of component library to `./build/storybook`
 * `yarn test`: run unit tests and show coverage
 * `yarn lint`: lint JS code
@@ -25,7 +48,7 @@ This will install all necessary dependencies.
 
 ### Pre-commit Hooks
 
-When attempting to commit files in this repository, some taks will automatically run to ensure a consistently high level of code quality:
+When attempting to commit files in this repository, some tasks will automatically run to ensure a consistently high level of code quality:
 
 * __JavaScript files (.js and .jsx):__
   * runs `eslint` and automatically fixes auto-fixable issues ([see related JS guidelines here](https://github.com/airbnb/javascript))
