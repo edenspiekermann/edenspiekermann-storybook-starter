@@ -1,0 +1,23 @@
+// example taken from: https://github.com/edenspiekermann/espi-ui-library/blob/master/src/patterns/components/button/button.scss
+
+.button {
+  @include reset-button-styles;
+
+  background-color: #000;
+  color: #fff;
+  display: inline-block;
+  padding: spacing(small) spacing(medium);
+  text-decoration: none;
+}
+
+.button:hover,
+.button:focus,
+.button:active {
+  background-color: lighten(#000, 30%);
+}
+
+.button--block {
+  display: block;
+  text-align: center;
+  width: 100%;
+}

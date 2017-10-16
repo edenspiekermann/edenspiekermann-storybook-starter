@@ -1,0 +1,131 @@
+{
+  "name": "oyez-components",
+  "version": "0.0.1",
+  "description": "a library containing all shared components and styles for the oyez platform",
+  "main": "components/index.js",
+  "scripts": {
+    "test": "jest --coverage",
+    "lint:styles": "stylelint \"**/*.scss\" --fix",
+    "lint": "eslint components --fix",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook -o build/storybook",
+    "sassdoc": "sassdoc sass/abstracts",
+    "update-snapshots": "jest --updateSnapshot",
+    "precommit": "lint-staged"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://jankohofmann@github.com/lovelysystems/oyez-components.git"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lovelysystems/oyez-components/issues"
+  },
+  "homepage": "https://github.com/lovelysystems/oyez-components#readme",
+  "lint-staged": {
+    "*.{js,jsx}": [
+      "eslint --fix",
+      "git add",
+      "jest --findRelatedTests"
+    ],
+    "*.scss": [
+      "stylelint --fix",
+      "git add"
+    ]
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "IE 10"
+  ],
+  "dependencies": {
+    "@storybook/addon-actions": "^3.2.12",
+    "@storybook/addon-links": "^3.2.12",
+    "@storybook/react": "^3.2.12",
+    "classnames": "^2.2.5",
+    "prop-types": "^15.6.0",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "sassdoc": "^2.3.0",
+    "storybook-readme": "^3.0.6"
+  },
+  "devDependencies": {
+    "@storybook/addon-backgrounds": "^3.0.0",
+    "@storybook/addon-options": "^3.2.12",
+    "@storybook/addon-storyshots": "^3.2.12",
+    "autoprefixer": "^7.1.5",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-3": "^6.24.1",
+    "css-loader": "^0.28.7",
+    "enzyme": "^3.1.0",
+    "enzyme-adapter-react-16": "^1.0.1",
+    "enzyme-to-json": "^3.1.2",
+    "eslint": "^4.8.0",
+    "eslint-config-airbnb": "^16.0.0",
+    "eslint-config-prettier": "^2.6.0",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jest": "^21.2.0",
+    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-prettier": "^2.3.1",
+    "eslint-plugin-react": "^7.4.0",
+    "husky": "^0.14.3",
+    "import-glob-loader": "^1.1.0",
+    "jest": "^21.2.1",
+    "lint-staged": "^4.2.3",
+    "node-sass": "^4.5.3",
+    "postcss-loader": "^2.0.7",
+    "prettier": "^1.7.4",
+    "raw-loader": "^0.5.1",
+    "react-test-renderer": "^16.0.0",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.19.0",
+    "stylelint": "^8.2.0",
+    "stylelint-config-sass-guidelines": "^3.1.0"
+  },
+  "dependencies/comments": {
+    "@storybook/addon-actions": "storybook addon to show events caused by components, e.g. button clicks",
+    "@storybook/addon-links": "storybook addon to link component documentation pages together",
+    "@storybook/react": "the actual storybook tool",
+    "classnames": "assign conditional and multiple classnames to react components",
+    "prop-types": "check type safety of react component props",
+    "react": "you know React :)",
+    "react-dom": "rendering React on the client",
+    "sassdoc": "generate documentation from annotated scss files",
+    "storybook-readme": "storybook addon to markdown documentation for components"
+  },
+  "devDependencies/comments": {
+    "@storybook/addon-backgrounds": "storybook addon to display components on different background colors",
+    "@storybook/addon-options": "storybook addon to customize the generated docs page",
+    "@storybook/addon-storyshots": "storybook addon to gerate jest snapshots of all component variants",
+    "autoprefixer": "adds vendor prefixes to css to improve browser compatibility (uses 'browserslist' property in this file as reference)",
+    "babel-preset-env": "babel preset to add compatibility with newest ECMAScript versions",
+    "babel-preset-react": "babel preset to add compatibility with JSX",
+    "babel-preset-stage-3": "babel preset to add compatibility with newest stable JS features like the object spread operator",
+    "css-loader": "loads .css files with Webpack",
+    "enzyme": "library for testing react components",
+    "enzyme-adapter-react-16": "makes enzyme compatible with React 16",
+    "enzyme-to-json": "allows to create Jest snapshots from enzyme wrappers",
+    "eslint": "lints and partially fixes JavaScript code",
+    "eslint-config-airbnb": "the linting preset we use for JS",
+    "eslint-config-prettier": "can autoformat code and fix more linting errors",
+    "eslint-plugin-import": "peerDependency of eslint-config-airbnb",
+    "eslint-plugin-jest": "adds linting rules for better tests",
+    "eslint-plugin-jsx-a11y": "peerDependency of eslint-config-airbnb",
+    "eslint-plugin-prettier": "can run prettier from eslint",
+    "eslint-plugin-react": "peerDependency of eslint-config-airbnb",
+    "husky": "adds git hooks to npm scripts (like precommit)",
+    "import-glob-loader": "enables importing of complete folders in scss via Webpack",
+    "jest": "our test runner",
+    "lint-staged": "can run tasks (linting and unit tests) on staged files",
+    "node-sass": "compiles scss to css",
+    "postcss-loader": "we need postcss to use the autoprefixer",
+    "prettier": "formats JavaScript code",
+    "raw-loader": "we need this to import markdown files in our JS via Webpack",
+    "react-test-renderer": "used for testing rendered markup from components",
+    "sass-loader": "load scss file via Webpack and send it to node-sass",
+    "style-loader": "inject css as style-tag into the page",
+    "stylelint": "lints and partially fixes (S)CSS code",
+    "stylelint-config-sass-guidelines": "the linting preset we use for (S)CSS"
+  }
+}
