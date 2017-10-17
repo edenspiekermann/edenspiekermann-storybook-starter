@@ -27,9 +27,9 @@ A component typically consists of:
 * A `componentName.jsx` file containing the React component as a default export. Be sure to include [prop types and default props](https://reactjs.org/docs/typechecking-with-proptypes.html) for the component.
 * A `componentName.stories.js` file containing the [stories](https://storybook.js.org/basics/writing-stories/) for this component. A story reflects a variant of the component that is documented on an individual page in Storybook.
 * A `componentName.test.js` file containing all unit tests for the component
-* A `README.md` containing the documentation for this component in Markdown format.
+* A `README.md` containing the documentation for this component in Markdown format
 * A `componentName.scss` file containg all styles for the components
-* A file containing the snapshots generated from the stories of this component. This will be taken care automatically and placed in a separate folder so you don't need to care about ut.
+* A file containing the snapshots generated from the stories of this component. This will be taken care of automatically and placed in a separate folder so you don't need to care about it.
 
 _(Replace componentName with the name of your component written in camel case accordingly)_
 
