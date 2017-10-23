@@ -2,7 +2,8 @@
 .env
 
 # Build output folders
-build/
+build
+dist
 
 # Logs
 logs
@@ -13,8 +14,8 @@ pids
 *.pid
 *.seed
 
-# Coverage directory used by tools like istanbul
-coverage
+# Coverage directory used by Jest
+.coverage
 
 # node-waf configuration
 .lock-wscript
@@ -23,8 +24,9 @@ coverage
 # https://www.npmjs.org/doc/misc/npm-faq.html#should-i-check-my-node_modules-folder-into-git-
 node_modules
 
-# Debug log from npm
+# Debug log from npm and yarn
 npm-debug.log
+yarn-error.log
 
 # IntelliJ IDE ignore
 .idea
@@ -32,12 +34,6 @@ npm-debug.log
 # Visual Studio Code
 .vscode
 .history
-
-# flow-typed Lib Defs
-flow-typed/
-
-# Flow Coverage Report
-flow-coverage/
 
 # Happypack
 .happypack

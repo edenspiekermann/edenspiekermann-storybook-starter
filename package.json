@@ -2,7 +2,7 @@
   "name": "espi-storybook-starter",
   "version": "0.0.1",
   "description": "Boilerplate repo for React-based component libraries",
-  "main": "components/index.js",
+  "main": "dist/components/index.js",
   "scripts": {
     "test": "jest --coverage",
     "lint:styles": "stylelint \"**/*.scss\" --fix",
@@ -11,17 +11,24 @@
     "build-storybook": "build-storybook -o build/storybook",
     "sassdoc": "sassdoc sass/abstracts",
     "update-snapshots": "jest --updateSnapshot",
-    "precommit": "lint-staged"
+    "precommit": "lint-staged",
+    "prebuild": "rimraf dist/components",
+    "build": "babel components --out-dir dist/components --copy-files --ignore *.stories.js,*.test.js --source-maps",
+    "postinstall": "yarn build"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/edenspiekermann/espi-storybook-starter.git"
   },
   "license": "ISC",
+  "homepage": "https://github.com/edenspiekermann/espi-storybook-starter#readme",
   "bugs": {
     "url": "https://github.com/edenspiekermann/espi-storybook-starter/issues"
   },
-  "homepage": "https://github.com/edenspiekermann/espi-storybook-starter#readme",
+  "engines": {
+    "node": ">=8.6.0",
+    "yarn": ">=1.2.1"
+  },
   "lint-staged": {
     "*.{js,jsx}": [
       "eslint --fix",
@@ -36,23 +43,23 @@
   "browserslist": [
     "> 1%",
     "last 2 versions",
-    "IE 10"
+    "IE 8"
   ],
   "dependencies": {
-    "@storybook/addon-actions": "^3.2.12",
-    "@storybook/addon-links": "^3.2.12",
-    "@storybook/react": "^3.2.12",
+    "babel-cli": "^6.26.0",
     "classnames": "^2.2.5",
     "prop-types": "^15.6.0",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
-    "sassdoc": "^2.3.0",
-    "storybook-readme": "^3.0.6"
+    "rimraf": "^2.6.2"
   },
   "devDependencies": {
+    "@storybook/addon-actions": "^3.2.12",
     "@storybook/addon-backgrounds": "^3.0.0",
+    "@storybook/addon-links": "^3.2.12",
     "@storybook/addon-options": "^3.2.12",
     "@storybook/addon-storyshots": "^3.2.12",
+    "@storybook/react": "^3.2.12",
     "autoprefixer": "^7.1.5",
     "babel-preset-env": "^1.6.0",
     "babel-preset-react": "^6.24.1",
@@ -79,25 +86,27 @@
     "raw-loader": "^0.5.1",
     "react-test-renderer": "^16.0.0",
     "sass-loader": "^6.0.6",
+    "sassdoc": "^2.3.0",
+    "storybook-readme": "^3.0.6",
     "style-loader": "^0.19.0",
     "stylelint": "^8.2.0",
     "stylelint-config-sass-guidelines": "^3.1.0"
   },
   "dependencies/comments": {
-    "@storybook/addon-actions": "storybook addon to show events caused by components, e.g. button clicks",
-    "@storybook/addon-links": "storybook addon to link component documentation pages together",
-    "@storybook/react": "the actual storybook tool",
+    "babel-cli": "we transpile our components with Babel to make them compatible with browsers and the node.js require mechanism",
     "classnames": "assign conditional and multiple classnames to react components",
     "prop-types": "check type safety of react component props",
     "react": "you know React :)",
     "react-dom": "rendering React on the client",
-    "sassdoc": "generate documentation from annotated scss files",
-    "storybook-readme": "storybook addon to markdown documentation for components"
+    "rimraf": "we use this to clean the dist folder before transpiling our modules"
   },
   "devDependencies/comments": {
+    "@storybook/addon-actions": "storybook addon to show events caused by components, e.g. button clicks",
     "@storybook/addon-backgrounds": "storybook addon to display components on different background colors",
+    "@storybook/addon-links": "storybook addon to link component documentation pages together",
     "@storybook/addon-options": "storybook addon to customize the generated docs page",
     "@storybook/addon-storyshots": "storybook addon to gerate jest snapshots of all component variants",
+    "@storybook/react": "the actual storybook tool",
     "autoprefixer": "adds vendor prefixes to css to improve browser compatibility (uses 'browserslist' property in this file as reference)",
     "babel-preset-env": "babel preset to add compatibility with newest ECMAScript versions",
     "babel-preset-react": "babel preset to add compatibility with JSX",
@@ -124,6 +133,8 @@
     "raw-loader": "we need this to import markdown files in our JS via Webpack",
     "react-test-renderer": "used for testing rendered markup from components",
     "sass-loader": "load scss file via Webpack and send it to node-sass",
+    "sassdoc": "generate documentation from annotated scss files",
+    "storybook-readme": "storybook addon to markdown documentation for components",
     "style-loader": "inject css as style-tag into the page",
     "stylelint": "lints and partially fixes (S)CSS code",
     "stylelint-config-sass-guidelines": "the linting preset we use for (S)CSS"
