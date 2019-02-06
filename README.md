@@ -40,7 +40,7 @@ In order to import your React component easily in other repositories, add it as 
 In your target application, you can then import the component like this:
 
 ```javascript
-import { Button } from 'espi-storybook-starter'; // replace the name of your repository accordingly
+import { Button } from 'edenspiekermann-storybook-starter'; // replace the name of your repository accordingly
 ```
 
 ### Available Tasks
