@@ -1,5 +1,5 @@
 {
-  "name": "espi-storybook-starter",
+  "name": "edenspiekermann-storybook-starter",
   "version": "0.0.1",
   "description": "Boilerplate repo for React-based component libraries",
   "main": "dist/components/index.js",
@@ -18,12 +18,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/edenspiekermann/espi-storybook-starter.git"
+    "url": "https://github.com/edenspiekermann/edenspiekermann-storybook-starter.git"
   },
   "license": "ISC",
-  "homepage": "https://github.com/edenspiekermann/espi-storybook-starter#readme",
+  "homepage": "https://github.com/edenspiekermann/edenspiekermann-storybook-starter#readme",
   "bugs": {
-    "url": "https://github.com/edenspiekermann/espi-storybook-starter/issues"
+    "url": "https://github.com/edenspiekermann/edenspiekermann-storybook-starter/issues"
   },
   "engines": {
     "node": ">=8.6.0",
