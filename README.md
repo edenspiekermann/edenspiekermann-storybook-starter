@@ -1,4 +1,4 @@
-# ESPI Storybook Starter
+# Edenspiekermann Storybook Starter
 
 This repository can be used alongside React projects to develop and documented all shared UI components in a separate environment.
 
