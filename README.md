@@ -46,11 +46,14 @@ import { Button } from 'edenspiekermann-storybook-starter'; // replace the name 
 ### Available Tasks
 
 * `yarn storybook`: run local server with the Storybook component library
-* `yarn build-storybook`: build static production version of component library to `./build/storybook`
-* `yarn test`: run unit tests and show coverage
+* `yarn build`: transpiles component library to `./dist` to be exported via NPM
+* `yarn build:storybook`: build static production version of component library to `./build`
+* `yarn build:sassdoc`: generate SCSS documentation to `./build/sassdoc`
+* `yarn build:docs`: lints and tests components and then builds Storybook and Sassdoc pages to `./build`
 * `yarn lint`: lint JS code
 * `yarn lint:styles`: lint SCSS code
-* `yarn sassdoc`: generate SCSS documentation to `./build/sassdoc`
+* `yarn test`: run unit tests and show coverage
+* `yarn coverage`: run unit tests and show coverage
 * `yarn update-snapshots`: [update jest snapshots](https://facebook.github.io/jest/docs/en/snapshot-testing.html) in case you intentionally changed the markup of your components
 
 ### Pre-commit Hooks
