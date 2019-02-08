@@ -7,9 +7,9 @@ import buttonReadme from './README.md';
 
 storiesOf('Basic Components/Button', module)
   .addDecorator(withReadme(buttonReadme))
-  .add('with text', () => (
-    <Button onClick={action('clicked')}>Hello Button</Button>
-  ))
+  .add('with text', () => <Button onClick={action('clicked')}>Hello Button</Button>)
   .add('full width version', () => (
-    <Button fullWidth onClick={action('clicked')}>Full Width Button</Button>
+    <Button fullWidth onClick={action('clicked')}>
+      Full Width Button
+    </Button>
   ));

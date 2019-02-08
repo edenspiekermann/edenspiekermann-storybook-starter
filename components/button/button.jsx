@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classnames from 'classnames';
+import clsx from 'clsx';
 
 const Button = props => {
   const { className, fullWidth, children, ...otherProps } = props;
@@ -8,11 +8,7 @@ const Button = props => {
     <button
       {...otherProps}
       type="button"
-      className={classnames(
-        'button',
-        { 'button--block': fullWidth },
-        className,
-      )}
+      className={clsx('button', { 'button--block': fullWidth }, className)}
     >
       {children}
     </button>
@@ -25,13 +21,13 @@ Button.propTypes = {
   /** when true, button will take up all available with */
   fullWidth: PropTypes.bool,
   /** content rendered inside the button, can be text or any element */
-  children: PropTypes.node
+  children: PropTypes.node,
 };
 
 Button.defaultProps = {
   className: '',
   fullWidth: false,
-  children: null
+  children: null,
 };
 
 export default Button;

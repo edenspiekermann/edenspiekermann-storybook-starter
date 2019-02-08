@@ -6,5 +6,5 @@ describe('Button Component', () => {
   it('should render a button', () => {
     const wrapper = shallow(<Button>Text</Button>);
     expect(wrapper.find('button')).toHaveLength(1);
-  })
+  });
 });
