@@ -48,9 +48,9 @@
   "dependencies": {
     "babel-cli": "^6.26.0",
     "classnames": "^2.2.5",
-    "prop-types": "^15.6.0",
-    "react": "^16.0.0",
-    "react-dom": "^16.0.0",
+    "prop-types": "^15.6.2",
+    "react": "^16.8.0",
+    "react-dom": "^16.8.0",
     "rimraf": "^2.6.2"
   },
   "devDependencies": {
@@ -84,7 +84,7 @@
     "postcss-loader": "^2.0.7",
     "prettier": "^1.7.4",
     "raw-loader": "^0.5.1",
-    "react-test-renderer": "^16.0.0",
+    "react-test-renderer": "^16.8.0",
     "sass-loader": "^6.0.6",
     "sassdoc": "^2.3.0",
     "storybook-readme": "^3.0.6",
