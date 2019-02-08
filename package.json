@@ -18,6 +18,10 @@
     "build": "babel components --out-dir dist/components --copy-files --ignore *.stories.js,*.test.js --source-maps",
     "postinstall": "yarn build"
   },
+  "files": [
+    "components",
+    "sass"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/edenspiekermann/edenspiekermann-storybook-starter.git"
