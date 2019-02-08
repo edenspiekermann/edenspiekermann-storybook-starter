@@ -3,7 +3,7 @@
 # (obviously yarn doesn't recognize this yet and just includes all files in the repo,
 # but it will probably do so in the future)
 
-.setup
+.jest
 .storybook
 .vscode
 build
